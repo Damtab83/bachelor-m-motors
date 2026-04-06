@@ -1,0 +1,13 @@
+package com.damtab.m_motors;
+
+import org.springframework.boot.SpringApplication;
+import org.springframework.boot.autoconfigure.SpringBootApplication;
+
+@SpringBootApplication
+public class MMotorsApplication {
+
+	public static void main(String[] args) {
+		SpringApplication.run(MMotorsApplication.class, args);
+	}
+
+}
