@@ -6,12 +6,16 @@ import jakarta.transaction.Transactional;
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.stereotype.Service;
 
+import java.util.List;
+
 @Service
 @Transactional
 public class TestingDrivingService {
 
     @Autowired
     private TestingDrivingRepository testingDrivingRepository;
+
+    public List<TestingDriving> getAllTestingDriving() { return testingDrivingRepository.findAll();}
 
     public TestingDriving getTestDrivingById(long id) {return testingDrivingRepository.findById(id).orElse(null);}
 

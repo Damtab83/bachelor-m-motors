@@ -1,14 +1,14 @@
 services:
   bdd:
     image: mariadb:12.2.2
-    container_name: m-motors_bdd
+    container_name: m-motors_app_bdd
     restart: unless-stopped
     environment:
       MARIADB_ROOT_PASSWORD: motdepasse
-      MARIADB_DATABASE: m-motors
+      MARIADB_DATABASE: m-motors_app
 
     ports:
-      - "3307:3306"
+      - "3308:3306"
     volumes:
       - mariadb_data:/var/lib/mysql
 

@@ -30,7 +30,7 @@ public class OrderService {
         return toDelete;
     }
 
-    public void updatedOrder(Order newOrder, Long id) {
+    public void updatedOrder(Long id, Order newOrder) {
         Order oldOrder = this.getOrderById(id);
         if (oldOrder == null) {
             throw new RuntimeException("Car not found");
